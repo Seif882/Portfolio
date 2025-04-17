@@ -1,5 +1,13 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./App.css";
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import CV from "./assets/CV.pdf";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   let [mood, setMood] = useState("dark");
@@ -106,6 +114,46 @@ function App() {
               with React who worked on a few personal projects to sharpen my
               skills and be ready for the next step
             </p>
+          </div>
+          {/* Contact */}
+          <div className={`fixed bottom-[15%] left-[5%] flex gap-2`}>
+            {/* Whatsapp */}
+            <a href="https://wa.me/+201220398033" target="_blank">
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+                size="2xl"
+                className="cursor-pointer"
+              />
+            </a>
+
+            {/* Github */}
+            <a
+              href="https://github.com/Seif882?tab=repositories"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                size="2xl"
+                className="cursor-pointer"
+              />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/seif-elshrkawe-656a431b7"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size="2xl"
+                className="cursor-pointer"
+              />
+            </a>
+
+            {/* Download C.V. */}
+            <a href={CV} download="MyCV" target="_blank">
+              <FontAwesomeIcon icon={faFileArrowDown} size="2xl" />
+            </a>
           </div>
         </div>
       </div>
